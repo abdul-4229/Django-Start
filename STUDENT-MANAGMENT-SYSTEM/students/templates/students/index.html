@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <i class="fa-solid fa-graduation-cap fa-lg"></i>Student Managment System</a>
+            <i class="fa-solid fa-graduation-cap fa-lg"></i>    Student Managment System</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -63,8 +63,41 @@
                     <td>{{ student.email}}</td>
                     <td>{{ student.feild_of_study}}</td>
                     <td>{{ student.gpa}}</td>
-                    <td>{{ ACTIONS}}</td>
-
+                    <td>
+                      <button type="button" class="btn btn-success me-1" href="{% url 'view_student' student.id %}"data-bs-toggle="modal" data-bs-target="#myModal{{student.id}}">
+                        <i class="fa-sharp fa-solid fa-circle-info"></i>
+                      </button>
+                      <!--Modal View Student-->
+                      <div class="modal" id="myModal{{student.id}}" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">
+                                student: {{ student.first_name}} {{ student.last_name}}
+                              </h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <ul class="list-unstyled">
+                                <li>ID: <strong>{{ student.id}}</strong></li>
+                                <li>First Name: <strong>{{ student.first_name}}</strong></li>
+                                <li>Last Name: <strong>{{ student.last_name}}</strong></li>
+                                <li>Email: <strong>{{ student.email}}</strong></li>
+                                <li>Field_Of_Study: <strong>{{ student.feild_of_study}}</strong></li>
+                                <li>GPA: <strong>{{ student.gpa}}</strong></li>
+                                
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </td>
                   </tr>
                   {% endfor %}
                 </tbody>
@@ -82,7 +115,8 @@
    <footer class="mt-auto mb-4">
     <div class="text-center">
       <span>
-        copyright &copy; <script>document.write(new date().getFullYear())</script>Al-imra primary and secondary school.
+        Copyright &copy; <script>document.write(new date().getFullYear())</script> Al-imra primary and secondary school.
+      </span>
     </div>
    </footer>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> 
