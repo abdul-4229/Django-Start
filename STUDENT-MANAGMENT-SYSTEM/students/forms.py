@@ -5,7 +5,7 @@ from .models import student
 class StudentForm(forms.ModelForm):
     class Meta:
         model = student
-        felids = ['student_number', 'first_name', 'last_name', 'email', 'feild_of_study','gpa']
+        fields  = ['student_number', 'first_name', 'last_name', 'email', 'feild_of_study','gpa']
         labels = {
             'student_number' 'Student Number', 
             'first_name' 'First Name', 
@@ -16,7 +16,7 @@ class StudentForm(forms.ModelForm):
         }
 
         widgets = {
-            'Student Number': forms.NumberInput(attrs={'class': 'form-control'}),
+            'student_number': forms.NumberInput(attrs={'class': 'form-control'}),
             'first_name' : forms.TextInput(attrs={'class': 'form-control'}),
             'last_name' : forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
