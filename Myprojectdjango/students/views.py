@@ -8,7 +8,8 @@ def index(request):
         'students': Student.objects.all()
     })
 
-def allstudents(request):
-    return render(request, 'students/allstudents.html', {
+def add(request):
+    return render(request, 'students/add.html', {
         'students': Student.objects.all()
-        }) 
+    })
+
