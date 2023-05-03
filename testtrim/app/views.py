@@ -12,3 +12,5 @@ def staff_expenses(request):
     return render(request,'staff_expenses.html')
 def service_expenses(request):
     return render(request,'service_expenses.html')
+def utility_bills(request):
+    return render(request,'utility_bills.html')
