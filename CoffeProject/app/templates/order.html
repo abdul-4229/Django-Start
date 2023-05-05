@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div>
+      <center>
+        <h1>Take Orders</h1>
+
+    </center>
+    </div>
+    <div>
+        <center>
+            <a href="{% url 'order'%}" class="btn btn-primary">Order</a>
+            <a href="{% url 'saler'%}" class="btn btn-success">Saler</a>
+            
+
+        </center>
+    </div><br>
+    <div>
+      <center>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add orrder
+        </button>
+        
+      </center>
+
+    </div>
+
+    <div>
+      <center>
+        <table class="table table-hover">
+          <thead>
+            <th>ID</th>
+            <th>Order</th>
+            <th>Type</th>
+            <th>Qty</th>
+            <th>Size</th>
+            <th>Price</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Coffe</td>
+              <td>cappuccino</td>
+              <td>1</td>
+              <td>$1</td>
+              <td>Take Away</td>
+              <td>
+                <a href="" class="btn btn-warning">Edit</a>
+                <a href="" class="btn btn-danger">Delete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Coffe</td>
+              <td>Latte</td>
+              <td>2</td>
+              <td>$2</td>
+              <td>Set</td>
+              <td>
+                <a href="" class="btn btn-warning">Edit</a>
+                <a href="" class="btn btn-danger">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </div>
+       <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
