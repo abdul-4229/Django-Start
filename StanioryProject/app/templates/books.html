@@ -18,6 +18,7 @@
         <center>
             <a href="{% url 'book'%}" class="btn btn-secondary">Books</a>
             <a href="{% url 'author'%}" class="btn btn-success">Author</a>
+            <a href="{% url 'saler'%}" class="btn btn-success">Saler</a>
 
         </center>
     </div><br>
@@ -50,7 +51,7 @@
               <td><a href="" class="btn btn-warning">Download</a></td>
               <td>Ali Yare</td>
               <td>
-                <a href="" class="btn btn-info">Edit</a>
+                <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#editmodal">Edit</button>
                 <a href="" class="btn btn-danger">Delete</a>
               </td>
             </tr>
@@ -101,6 +102,39 @@
   </div>
 </div>
 
+
+
+
+
+<div class="modal fade" id="editmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Update Form</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
