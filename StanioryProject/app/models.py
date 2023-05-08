@@ -12,3 +12,11 @@ class Book(models.Model):
     file = models.FileField()
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
+
+class Saler(models.Model):
+    name = models.CharField(max_length=10)
+    telephone = models.CharField(max_length=4)
+    email = models.EmailField()
+    Book_name = models.CharField(max_length=20)
+    Price = models.CharField(max_length=20)
+
