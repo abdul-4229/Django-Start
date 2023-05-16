@@ -1,3 +1,6 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
 
 
 <div class="nav-left-sidebar sidebar-dark">
@@ -17,11 +20,11 @@
                         
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-users"></i>Registration <span class="badge badge-secondary">New</span></a>
+                        <a class="nav-link" href="{% url 'book' %}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-users"></i>Books <span class="badge badge-secondary">New</span></a>
                         <div id="submenu-7" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'addstudent' %}"><i class=" fas fa-plus"></i> Add students</a>
+                                    <a class="nav-link" href="#"><i class=" fas fa-plus"></i> Books</a>
                                 </li>
                             </ul>
                         </div>
