@@ -39,13 +39,14 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Create Daily Cash </h2>
+                                <h2 class="pageheader-title">Write Daily Cash Here </h2>
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="{% url 'index' %}" class="breadcrumb-link">Dashboard</a></li>
                                             <li class="breadcrumb-item active" aria-current="page">if you want to go back</li>
+                                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
                                         </ol>
                                     </nav>
                                 </div>
@@ -55,10 +56,126 @@
                     <!-- ============================================================== -->
                     <!-- end pageheader  -->
                     <!-- ============================================================== -->
-                    
-                </div>
+                    <div>
+                        <center>
+                  
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Saler
+                          </button>  
+                        </center>
+                      </div>
+                      <div>
+                        <center>
+                          <table class="table table-hover">
+                            <thead>
+                              <th>#</th>
+                              <th> Name</th>
+                              <th> Telephonw</th>
+                              <th>Title</th>
+                              <th>Author</th>
+                              <th>Action</th>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Abdirahman Faghi</td>
+                                <td>12341243</td>
+                                <td>XILKAS</td>
+                                <td>Cabdikariim Cusman Jamac</td>
+                               <td>
+                                  <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editmodal">Edit</button>
+                                  <a href="" class="btn btn-danger">Delete</a>
+                                </td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </center>
+                      </div>
+                  
+             </div>
             </div>
-            <!-- ============================================================== -->
+
+            
+            <!-- Modal --> 
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Author</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="modal fade" id="editmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Update Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    {% include "include/script.html" %}
+    
+    
+    
+
+
+
+
+      <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
             <!-- <div class="footer">
@@ -80,17 +197,9 @@
             <!-- ============================================================== -->
             <!-- end footer -->
             <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- end wrapper  -->
-        <!-- ============================================================== -->
-    </div>
-    <!-- ============================================================== -->
-    <!-- end main wrapper  -->
-    <!-- ============================================================== -->
-    <!-- Optional JavaScript -->
-    <!-- jquery 3.3.1 -->
-    {% include "include/script.html" %}
+  
+            
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
  
 </html>
