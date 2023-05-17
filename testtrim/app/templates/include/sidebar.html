@@ -6,7 +6,7 @@
 <div class="nav-left-sidebar sidebar-dark">
     <div class="menu-list">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+            <a class="d-xl-none d-lg-none" href="{% url 'index' %}">Dashboard</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -20,48 +20,18 @@
                         
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'book' %}" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-users"></i>Books <span class="badge badge-secondary">New</span></a>
-                        <div id="submenu-7" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#"><i class=" fas fa-plus"></i> Books</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>    
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class=" fas fa-file-alt"></i>Exam </a>
-                        <div id="submenu-8" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Grade 1</a>
-                                </li>
-                                    <a class="nav-link" href="#">Grade 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Grade 3</a>
-                            </ul>
-                        </div>
-                    </li>     
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-money-bill-alt"></i>Finance </a>
-                        <div id="submenu-9" class="collapse submenu" style="">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/map-google.html">Garde 1</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/map-vector.html">Garde 2</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/map-vector.html">Garde 3</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <a class="nav-link" href="{% url 'book' %}"><i class="fas fa-book"></i>Book</a>
                     </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'author' %}"><i class="fas fa-book"></i>Author</a>
+                    </li>
+                        
                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sale' %}"><i class="fas fa-book"></i>Sale</a>
+                    </li>
                 
                 
                     </div>
